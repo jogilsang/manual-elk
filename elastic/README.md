@@ -14,7 +14,11 @@ install : cd /usr/share/elasticsearch/
 config : cd /etc/elasticsearch
 init script : cd /etc/init.d/elasticsearch
 sudo systemctl enable elasticsearch.service
+```
 
+### start
+```
 sudo service elasticsearch start
 sudo service elasticsearch stop
 ```
+
