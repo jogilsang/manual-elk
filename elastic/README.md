@@ -31,6 +31,17 @@ network.host: 127.0.0.1
 # Set a custom port for HTTP:
 #
 http.port: 9200
+
+sudo vi /etc/elasticsearch/jvm.options
+
+# Xms represents the initial size of total heap space
+# Xmx represents the maximum size of total heap space
+
+-Xms128m
+-Xmx128m
+
+***
+https://stackoverflow.com/questions/58656747/elasticsearch-job-for-elasticsearch-service-failed/58656748
 ```
 
 ### 4. start
