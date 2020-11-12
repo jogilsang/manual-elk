@@ -86,4 +86,11 @@ curl -XDELETE http://localhost:9200/classes
 curl -XPOST http://localhost:9200/classes/class/1/ -d '
 curl -XPOST http://localhost:9200/classes/class/1/ -d @oneclass.json
 curl -XGET http://localhost:9200/classes/class/1/?pretty
+
+```
+
+### Bulk 
+```
+curl -XPOST http://localhost:9200/_bulk?pretty --data-binary @classes.json
+curl -XGET http://localhost:9200/classes/class/1?pretty
 ```
