@@ -138,3 +138,10 @@ curl -XGET 'localhost:9200/test/record/_search -d'
 }
 '
 ```
+
+### aggregation
+doc의 조합을 통해 값을 도출할때 사용   
+```
+metric aggregation은 산술 (평균, 최대값, 최소값 등)
+bucket aggregation은 group by
+```
