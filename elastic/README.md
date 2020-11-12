@@ -123,3 +123,18 @@ curl -XGET localhost:9200/classes?pretty
 
 curl -XPUT 'localhost:9200/classes/class/mapping' -d @class_mapping.json
 ```
+
+### search
+```
+*** request body 문서가 별도로 있음
+
+curl -XGET localhost:9200/test/record/_search?pretty
+curl -XGET 'localhost:9200/test/record/_search?q=points:30&pretty'
+curl -XGET 'localhost:9200/test/record/_search -d'
+{
+	"query" : {
+		"term" : {"points" : 30}		
+        }
+}
+'
+```
