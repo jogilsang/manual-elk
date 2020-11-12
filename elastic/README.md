@@ -77,3 +77,13 @@ curl -XGET localhost:9200
 ***
 journalctl -xe
 ```
+
+### 6. command
+```
+curl -XGET http://localhost:9200/classes?pretty
+curl -XDELETE http://localhost:9200/classes
+
+curl -XPOST http://localhost:9200/classes/class/1/ -d '
+curl -XPOST http://localhost:9200/classes/class/1/ -d @oneclass.json
+curl -XGET http://localhost:9200/classes/class/1/?pretty
+```
