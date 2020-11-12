@@ -94,3 +94,32 @@ curl -XGET http://localhost:9200/classes/class/1/?pretty
 curl -XPOST http://localhost:9200/_bulk?pretty --data-binary @classes.json
 curl -XGET http://localhost:9200/classes/class/1?pretty
 ```
+
+### mapping
+관계형 데이터베이스에서 스키마와 동일   
+```
+curl -XPUT localhost:9200/classes
+{"acknowledged":true,"shards_acknowledged":true,"index":"classes"}
+
+curl -XGET localhost:9200/classes?pretty
+{
+  "classes" : {
+    "aliases" : { },
+    "mappings" : { },
+    "settings" : {
+      "index" : {
+        "creation_date" : "1605183088554",
+        "number_of_shards" : "1",
+        "number_of_replicas" : "1",
+        "uuid" : "Gh8wLxDSQA6rfyL64aYYfQ",
+        "version" : {
+          "created" : "7090399"
+        },
+        "provided_name" : "classes"
+      }
+    }
+  }
+}
+
+curl -XPUT 'localhost:9200/classes/class/mapping' -d @class_mapping.json
+```
