@@ -78,6 +78,18 @@ curl -XGET localhost:9200
 journalctl -xe
 ```
 
+### 6. version
+```
+cd /etc/default
+sudo chmod -R 777 elasticsearch
+
+cd /var/log/
+sudo chmod -R 777 elasticsearch/
+
+/usr/share/elasticsearch/bin/elasticsearch --version
+Version: 7.9.3, Build: default/deb/c4138e51121ef06a6404866cddc601906fe5c868/2020-10-16T10:36:16.141335Z, JVM: 15
+```
+
 ### 6. command
 ```
 curl -XGET http://localhost:9200/classes?pretty
